@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPSLS Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="header">
+        <div class="title">
+          <h1>Rock<br />Paper<br />Scissors<br />Lizard<br />Spock</h1>
+        </div>
+        <div class="score-board">
+          <p>Score</p>
+          <h2 id="score">0</h2>
+        </div>
+      </div>
+
+      <div class="play-settings">
+        <label for="round-limit">Play up to:</label>
+        <select id="round-limit">
+          <option value="3">Best of 3</option>
+          <option value="5" selected>Best of 5</option>
+          <option value="10">Best of 10</option>
+          <option value="0">Unlimited</option>
+        </select>
+      </div>
+
+      <div class="options">
+        <button class="btn rock" data-choice="rock"></button>
+        <button class="btn paper" data-choice="paper"></button>
+        <button class="btn scissors" data-choice="scissors"></button>
+        <button class="btn lizard" data-choice="lizard"></button>
+        <button class="btn spock" data-choice="spock"></button>
+      </div>
+
+      <div class="result" id="result"></div>
+
+      <div class="game-controls">
+        <button id="restartBtn" class="restart hidden">Restart Game</button>
+      </div>
+
+      <button class="rules-btn">Rules</button>
+    </div>
+
+    <div class="rules-modal hidden" id="rulesModal">
+      <div class="modal-content">
+        <h2>Game Rules</h2>
+        <ul>
+          <li>Scissors cuts Paper</li>
+          <li>Paper covers Rock</li>
+          <li>Rock crushes Lizard</li>
+          <li>Lizard poisons Spock</li>
+          <li>Spock smashes Scissors</li>
+          <li>Scissors decapitates Lizard</li>
+          <li>Lizard eats Paper</li>
+          <li>Paper disproves Spock</li>
+          <li>Spock vaporizes Rock</li>
+          <li>Rock crushes Scissors</li>
+        </ul>
+        <button id="closeRules">Close</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
