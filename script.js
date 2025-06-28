@@ -48,8 +48,8 @@ document.querySelectorAll(".btn").forEach((btn) => {
 
     if (roundLimit > 0 && roundsPlayed === roundLimit) {
       let finalMsg = "It's a draw!";
-      if (playerWins > cpuWins) finalMsg = "?? You win the game!";
-      else if (cpuWins > playerWins) finalMsg = "?? Computer wins the game!";
+      if (playerWins > cpuWins) finalMsg = "You win the game!";
+      else if (cpuWins > playerWins) finalMsg = "Computer wins the game!";
       resultEl.textContent += `\n\n${finalMsg}`;
       restartBtn.classList.remove("hidden");
     }
